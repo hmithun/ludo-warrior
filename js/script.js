@@ -1890,8 +1890,8 @@ function fullscreen() {
     }
 }
 
-$(window).load(function() {
-      // loader
+
+$(window).on("load", function() {
     $("#status").fadeOut();
     $("#preloader").delay(100).fadeOut("slow"); 
 });
