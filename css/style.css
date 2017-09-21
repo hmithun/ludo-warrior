@@ -1,0 +1,1016 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:400,700,700i');
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+html, body {
+    height: 100%;
+}
+
+
+body {
+    background-image: url('../images/Slice 1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Baloo Tammudu', cursive;
+}
+/****************** Ludo Box ************************/
+                    /* START */
+/****************** Ludo Box ************************/
+.ludo {
+    background: #ccc;
+    width: 750px;
+    height: 750px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.boardSection1.sec-1 {
+    width: 300px;
+    float: left;
+    height: 300px;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+}
+.boardSection1.sec-2 {
+    width: 150px;
+    float: left;
+    height: 300px;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+}
+.boardSection1.sec-3 {
+    width: 300px;
+    float: left;
+    height: 300px;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+}
+.ludoBoardBox {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    position: relative;
+}
+.boardSection1,
+.boardSection2,
+.boardSection3 {
+    position: relative;
+}
+.boardSection3.sec-1,
+.boardSection3.sec-3 {
+    height: 150px;
+    width: 300px;
+    float: left;
+}
+.boardSection3.sec-2 {
+    float: left;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.7);
+}
+.boardSection2 .ludoBoardBox {
+    height: 50px;
+    width: 50px;
+}
+.ludoplrbox {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #000;
+    height: 200px;
+    margin: 50px;
+    width: 200px;
+    position: relative;
+    z-index: 99;
+}
+.ludoplrbox span {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    display: inline-block;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.4);
+    -ms-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.4);
+    -o-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.4);
+}
+.ludoplrbox span:nth-child(1){
+    left: 20px;
+    top: 20px;
+}
+.ludoplrbox span:nth-child(2){
+    right: 20px;
+    top: 20px;
+}
+.ludoplrbox span:nth-child(3){
+    left: 20px;
+    bottom: 20px;
+}
+.ludoplrbox span:nth-child(4){
+    right: 20px;
+    bottom: 20px;
+}
+.ludoBtn {
+    background: #000 none repeat scroll 0 0;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: 10px;
+    margin-left: 10px;
+    pointer-events: none;
+}
+.ludoBtn-red,
+.ludoBtn-red-completed {
+    background: #EC1C23 none repeat scroll 0 0;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: 5px;
+    margin-left: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -ms-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -o-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+.ludoBtn-red.activeredbtn {
+    border: 4px dashed #000;
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    pointer-events: inherit;
+    z-index: 9;
+}
+.ludoBtn-yellow,
+.ludoBtn-yellow-completed {
+    background: #FFDE17 none repeat scroll 0 0;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: 5px;
+    margin-left: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -ms-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -o-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+.ludoBtn-yellow-completed {
+    left: 5px;
+    top: 92px;
+}
+.ludoBtn-yellow.activeyellowbtn {
+    border: 4px dashed #000;
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    pointer-events: inherit;
+    z-index: 9;
+}
+.ludoBtn-blue,
+.ludoBtn-blue-completed {
+    background: #1F88DB;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: 5px;
+    margin-left: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -ms-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -o-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+.ludoBtn-blue.activebluebtn {
+    border: 4px dashed #000;
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    pointer-events: inherit;
+    z-index: 9;
+}
+.ludoBtn-green,
+.ludoBtn-green-completed {
+    background: #019C48;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: 5px;
+    margin-left: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -ms-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    -o-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+.ludoBtn-green.activegreenbtn {
+    border: 4px dashed #000;
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    pointer-events: inherit;
+    z-index: 9;
+}
+.ludoBtn.active {
+    border: 4px dashed #000;
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    pointer-events: inherit;
+}
+.redBox .ludoBtn {
+    background: #EC1C23;
+}
+.yellowBox .ludoBtn {
+    background: #FFDE17;
+}
+.blueBox .ludoBtn {
+    background: #1F88DB;
+}
+.greenBox .ludoBtn {
+    background: #019C48;
+}
+
+
+
+
+/* BTN Animation */
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+
+
+/****************** Ludo Box ************************/
+                    /* END */
+/****************** Ludo Box ************************/
+
+
+/****************** Dice Box For Each Player ************************/
+                    /* START */
+/****************** Dice Box For Each Player ************************/
+.diceBox {
+    color: #000;
+    display: inline-block;
+    height: 110px;
+    width: 110px;
+    /* border: 3px solid transparent; */
+    /* border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px; */
+    font-size: 0;
+    text-align: center;
+    font-family: monospace;
+    line-height: 90px;
+    background: #fff;
+    z-index: 1;
+    background: #fff;
+    transition: all ease-in-out 200ms;
+}
+.greenBox .diceBox {
+    position: absolute;
+    left: -140px;
+    top: 0;
+    padding: 4px 0 0 4px;
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    border: 3px solid #fff;
+    background: #019C48
+}
+.blueBox .diceBox {
+    position: absolute;
+    right: -140px;
+    top: 0;
+    padding: 8px 0 0 10px;
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    border: 3px solid #fff;
+    background: #1F88DB;
+}
+.redBox .diceBox {
+    position: absolute;
+    left: -140px;
+    bottom: 0;
+    padding: 10px 0 0 8px;
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    border: 3px solid #fff;
+    background: #EC1C23;
+}
+.yellowBox .diceBox {
+    position: absolute;
+    right: -140px;
+    bottom: 0;
+    padding: 10px 0 0 10px;
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    border: 3px solid #fff;
+    background: #FFDE17
+}
+/* .yellowBox .diceBox.disabled {
+    right: 200px;
+}
+.yellowBox .diceBox.enable {
+    right: -120px;
+}
+
+.blueBox .diceBox.disabled {
+    right: 200px;
+}
+.blueBox .diceBox.enable {
+    right: -120px;
+}
+.greenBox .diceBox.disabled {
+    left: 200px;
+}
+.greenBox .diceBox.enable {
+    left: -120px;
+} */
+
+
+
+
+
+
+
+.diceBox {
+    /* opacity: 0.6; */
+}
+.diceBox.disabled {
+    pointer-events: none;
+    border-color: #ccc;
+}
+.diceBox.enable {
+    pointer-events: inherit;
+    
+    cursor: pointer;
+    /* opacity: 1; */
+}
+.diceBox.disabled .diceIcon {
+    opacity: 0.2;
+}
+.diceBox.enable .diceIcon {
+    animation: fadein 0.4s ease-in alternate infinite;
+}
+.onetimePlease {
+    pointer-events: none !important;
+}
+
+@keyframes fadein {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+}
+
+/****************** Dice Box For Each Player ************************/
+                    /* End */
+/****************** Dice Box For Each Player ************************/
+
+
+
+/****************** Final Step ************************/
+                    /* START */
+/****************** Final Step ************************/
+.finalredBox {
+    height: 150px;
+    width: 150px;
+    background: #EC1C23;
+    position: absolute;
+    bottom: -106px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+}
+.finalyelloBox {
+    height: 150px;
+    width: 150px;
+    background: #FFDE17;
+    position: absolute;
+    bottom: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    left: 106px;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+}
+.finalblueBox {
+    height: 150px;
+    width: 150px;
+    background: #1F88DB;
+    position: absolute;
+    bottom: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    top: -106px;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+}
+.finalgreenBox {
+    height: 150px;
+    width: 150px;
+    background: #019C48;
+    position: absolute;
+    bottom: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    left: -106px;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -ms-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -moz-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+    -o-box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+}
+/****************** Final Step ************************/
+                    /* END */
+/****************** Final Step ************************/
+
+/****************** Star Icon ************************/
+                    /* START */
+/****************** Star Icon ************************/
+.star {
+    background-image: url('../images/star-outline-md.png') !important;
+    background-size: 40px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.star.greenstartbox, .star.redstartbox, .star.bluestartbox, .star.yellowstart {
+    background-image: url('../images/star-outline-md-white.png') !important;
+    background-size: 40px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+/****************** Star Icon ************************/
+                    /* END */
+/****************** Star Icon ************************/
+
+
+/****************** Arrow Icons ************************/
+                    /* START */
+/****************** Arrow Icons ************************/
+.yellow-arw {
+    background: url('../images/yellowarw.png') no-repeat center;
+    background-size: 20px;
+    background-color: white;
+    transform: rotate(-90deg);
+}
+.red-arw {
+    background: url('../images/redarw.png') no-repeat center;
+    background-size: 20px;
+    background-color: white;
+}
+.green-arw {
+    background: url('../images/greenarw.png') no-repeat center;
+    background-size: 20px;
+    background-color: white;
+    transform: rotate(90deg);
+}
+.blue-arw {
+    background: url('../images/bluearw.png') no-repeat center;
+    background-size: 20px;
+    background-color: white;
+    transform: rotate(180deg);
+}
+/****************** Arrow Icons ************************/
+                    /* END */
+/****************** Arrow Icons ************************/
+
+
+
+
+
+/****************** Dice Icon ************************/
+                    /* START */
+/****************** Dice Icon ************************/
+
+.diceIcon {
+    position:absolute; 
+    pointer-events: none;
+} 
+.dice{
+    width:90px; 
+    height:90px; 
+    background:url('../images/dice.png') no-repeat;
+} 
+.dice_1{
+    background-position:-5px -4px
+} 
+.dice_2{
+    background-position:-5px -107px
+} 
+.dice_3{
+    background-position:-5px -212px
+} 
+.dice_4{
+    background-position:-5px -317px
+} 
+.dice_5{
+    background-position:-5px -427px
+} 
+.dice_6{
+    background-position:-5px -535px
+} 
+.dice_t{
+    background-position:-5px -651px
+} 
+.dice_s{
+    background-position:-5px -763px
+} 
+.dice_e{
+    background-position:-5px -876px
+} 
+#dice_mask{
+    width:90px; 
+    height:90px; 
+    background:#fff; 
+    opacity:0; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    z-index:999
+} 
+/****************** Dice Icon ************************/
+                    /* END */
+/****************** Dice Icon ************************/
+
+
+
+
+
+
+.ludoBtn-red.activeredbtn.newcls{
+    animation: none !important;
+    border: 1px solid #000 !important;
+    pointer-events: none !important;
+}
+.finalredBox > div,
+.finalyelloBox > div,
+.finalblueBox > div,
+.finalgreenBox > div {
+    animation: none !important;
+    border: none !important;
+}
+
+.redBox.activatedOtrBox {
+    background-image:none !important;
+    -webkit-animation: redfadeIt 0.7s ease-in-out infinite; 
+       -moz-animation: redfadeIt 0.7s ease-in-out infinite; 
+         -o-animation: redfadeIt 0.7s ease-in-out infinite; 
+            animation: redfadeIt 0.7s ease-in-out infinite; 
+}
+.yellowBox.activatedOtrBox {
+    background-image:none !important;
+    -webkit-animation: yellowfadeIt 0.7s ease-in-out infinite; 
+       -moz-animation: yellowfadeIt 0.7s ease-in-out infinite; 
+         -o-animation: yellowfadeIt 0.7s ease-in-out infinite; 
+            animation: yellowfadeIt 0.7s ease-in-out infinite; 
+}
+.blueBox.activatedOtrBox {
+    background-image:none !important;
+    -webkit-animation: bluefadeIt 0.7s ease-in-out infinite; 
+       -moz-animation: bluefadeIt 0.7s ease-in-out infinite; 
+         -o-animation: bluefadeIt 0.7s ease-in-out infinite; 
+            animation: bluefadeIt 0.7s ease-in-out infinite; 
+}
+.greenBox.activatedOtrBox {
+    background-image:none !important;
+    -webkit-animation: greenfadeIt 0.7s ease-in-out infinite; 
+       -moz-animation: greenfadeIt 0.7s ease-in-out infinite; 
+         -o-animation: greenfadeIt 0.7s ease-in-out infinite; 
+            animation: greenfadeIt 0.7s ease-in-out infinite; 
+}
+@keyframes redfadeIt {
+  0%   { background-color: #ab060b; }
+  50%  { background-color: #EC1C23; }
+  100% { background-color: #ab060b; }
+}
+@keyframes yellowfadeIt {
+  0%   { background-color: #c7ab00; }
+  50%  { background-color: #ffde17; }
+  100% { background-color: #c7ab00; }
+}
+@keyframes bluefadeIt {
+  0%   { background-color: #1169af; }
+  50%  { background-color: #1F88DB; }
+  100% { background-color: #1169af; }
+}
+@keyframes greenfadeIt {
+  0%   { background-color: #017938; }
+  50%  { background-color: #019C48; }
+  100% { background-color: #017938; }
+}   
+
+.ludoBoardBox > div {
+    font-size: 26px;
+    color: #000;
+    font-family: monospace;
+    text-align: center;
+    line-height: 34px;
+    text-shadow: 1px 1px 5px #fff;
+}
+
+.finalredBox.ludoBoardBox.redStep,
+.finalyelloBox.ludoBoardBox.yellowStep,
+.finalblueBox.ludoBoardBox.blueStep,
+.finalgreenBox.ludoBoardBox.greenStep {
+    height: inherit;
+    width: inherit;
+    padding: 7px;
+}
+
+.homeScreen {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: url("../images/parcheesi-1152049.jpg");
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.homeScreen .txt, .homeScreen .options {
+    text-align: center;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    
+    position: absolute;
+}
+.homeScreen h2 {
+    font-size: 240px;
+    color: #fff;
+    font-family: 'Lobster Two', cursive;
+    text-shadow: 5px 4px 5px rgba(0,0,0,0.6), -5px 4px 5px rgba(0,0,0,0.6);
+    position: relative;
+    /* letter-spacing: 40px; */
+    font-style: italic;
+    text-transform: capitalize;
+    line-height: 1;
+    margin-bottom: 100px;
+}
+.homeScreen h2 span {
+    font-size: 36px;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    color: #000;
+    /* letter-spacing: 5px; */
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+
+}
+.homeScreen h3 {
+    color: #fff;
+    font-size: 32px;
+    letter-spacing: 3px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6), -5px 0px 5px rgba(0,0,0,0.6);
+    text-transform: capitalize;
+
+}
+/* .homeScreen h3:hover {
+    border-color: black;
+    background: rgba(255,255,255,1);
+} */
+
+#preloader {
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+#status {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 400px;
+    left: 50%;
+    margin: -200px 0 0 -200px;
+    position: absolute;
+    top: 50%;
+    width: 400px;
+}
+.options {
+    text-align: center;
+}
+.options h2 {
+    font-size: 160px;
+    /* letter-spacing: 26px; */
+    margin-bottom: 50px;
+    line-height: 1;
+}
+.options h2 span {
+    font-size: 22px;
+    /* letter-spacing: 6px; */
+    left: 90px;
+    top: 23px;
+}
+
+
+
+
+
+.modalChoosePlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+}
+
+.modalChoosePlayerInner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(0,0,0,0.8);
+    width: 500px;
+    border-radius: 5px;
+    padding: 40px 20px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+.modalChoosePlayerInner h4 {
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6);
+    color: #012265;
+    line-height: 1;
+    /* text-transform: uppercase; */
+    font-family: fantasy;
+}
+.playerChooseBox {
+    padding-left: 40px;
+}
+.playerChooseBox input {
+    display: none;
+}
+.playerChooseBox input + label {
+    position: relative;
+    cursor: pointer;
+}
+.playerChooseBox input + label:before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 23px;
+    height: 30px;
+    width: 30px;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    border: 4px solid #012265;
+    box-shadow: 0px 0px 20px rgba(1,34,101,0.8);
+}
+.playerChooseBox input[type="radio"]:checked + label:before {
+    background: #012265;
+    box-shadow: 0px 0px 20px rgba(1,34,101,0.8), 0px 0px 0px 5px rgba(255,255,255,1) inset;
+}
+.playerChooseBox ul {
+    text-align: center;
+}
+.playerChooseBox ul li {
+    list-style: none;
+    padding: 15px 5px 2px 5px;
+    font-weight: bold;
+    font-size: 30px;
+    border: 2px solid #fff;
+    margin: 15px;
+    line-height: 1;
+    border-radius: 60px;
+    text-align: center;
+    color: #012265;
+    text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 0px 2px #012265;
+    text-rendering: geometricPrecision;
+    text-transform: capitalize;
+    display: inline-block;
+    width: 160px;
+}
+.red-player {
+    background: #EC1C23;
+}
+.yellow-player {
+    background: #FFDE17;
+}
+.blue-player {
+    background: #1F88DB;
+}
+.green-player {
+    background: #019C48;
+}
+.multiplayer {
+    text-align: center;
+    margin-top: 30px;
+}
+.multiplayer input {
+    display: none;
+}
+.multiplayer label {
+    color: #012265;
+    font-size: 30px;
+    border: 3px solid #012265;
+    padding: 15px 10px 0px 10px;
+    margin: 0 10px;
+    line-height: 1;
+    display: inline-block;
+    border-radius: 5px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.multiplayer input[type="radio"]:checked + label {
+    background: #012265;
+    color: #fff;
+    opacity: 1;
+}
+.play label {
+    opacity: 1;
+    margin: 20px;
+}
+
+/* .deactivePlayer {
+    opacity: 0.3;
+} */
+.logo {
+    text-align: center;
+}
+.logo-small h2 {
+    font-size: 110px;
+    margin-bottom: 50px;
+}
+.logo-small h2 span {
+    font-size: 20px;
+    top: 15px;
+    left: 175px;
+}
+.optionBox > div > h3 {
+    margin: 10px 0;
+}
+#imgs {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    z-index: 1;
+    display: table;
+    background: rgba(0,0,0,0.8);
+}
+.win-info-inner {
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    height: 200px;
+    text-align: center;
+    background: url('../images/King_Crown_and_Cape_PNG_Clipart.png');
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: center 250px;
+}
+.win-info {
+    padding: 20px 0;
+}
+.win-info h3 {
+    font-size: 40px;
+    color: #012265;
+    margin: 14px 0;
+    text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(0,0,0,0.6);
+}
+.cong-msg {
+    margin-bottom: 275px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
