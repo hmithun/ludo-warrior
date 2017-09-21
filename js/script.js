@@ -182,9 +182,7 @@ $(document).ready(function() {
     // Enable First Player (Red) First Time
     $(".redBox .diceBox").addClass('enable').removeClass('disabled');
 
-    // loader
-    $("#status").fadeOut();
-    $("#preloader").delay(100).fadeOut("slow"); 
+    
 
     $("#bg").trigger('play');
     $("#bg").prop("currentTime", 0);
@@ -1867,6 +1865,12 @@ $(document).ready(function() {
     });
     
 
+});
+
+$(window).load(function(){
+    // loader
+    $("#status").fadeOut();
+    $("#preloader").delay(100).fadeOut("slow"); 
 });
 
 function fullscreen() {
