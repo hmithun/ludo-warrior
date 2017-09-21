@@ -1820,8 +1820,8 @@ $(document).ready(function() {
 
     $(window).on('click',function(){
         $(".ludoBoardBox").each(function() {
-            if($(this).children('.ludoBtn-red').length > 1) {
-                var abcgf = $(this).children('.ludoBtn-red').length;
+            if($(this).children('.ludoBtn-red, .ludoBtn-red-completed').length > 1) {
+                var abcgf = $(this).children('.ludoBtn-red, .ludoBtn-red-completed').length;
             } else {
                 var abcgf = null;
             }
@@ -1832,8 +1832,8 @@ $(document).ready(function() {
 
     $(window).on('click',function(){
         $(".ludoBoardBox").each(function() {
-            if($(this).children('.ludoBtn-yellow').length > 1) {
-                var abcgf = $(this).children('.ludoBtn-yellow').length;
+            if($(this).children('.ludoBtn-yellow, .ludoBtn-yellow-completed').length > 1) {
+                var abcgf = $(this).children('.ludoBtn-yellow, .ludoBtn-yellow-completed').length;
             } else {
                 var abcgf = null;
             }
@@ -1844,8 +1844,8 @@ $(document).ready(function() {
 
     $(window).on('click',function(){
         $(".ludoBoardBox").each(function() {
-            if($(this).children('.ludoBtn-blue').length > 1) {
-                var abcgf = $(this).children('.ludoBtn-blue').length;
+            if($(this).children('.ludoBtn-blue, .ludoBtn-blue-completed').length > 1) {
+                var abcgf = $(this).children('.ludoBtn-blue, .ludoBtn-blue-completed').length;
             } else {
                 var abcgf = null;
             }
@@ -1856,8 +1856,8 @@ $(document).ready(function() {
 
     $(window).on('click',function(){
         $(".ludoBoardBox").each(function() {
-            if($(this).children('.ludoBtn-green').length > 1) {
-                var abcgf = $(this).children('.ludoBtn-green').length;
+            if($(this).children('.ludoBtn-green, .ludoBtn-green-completed').length > 1) {
+                var abcgf = $(this).children('.ludoBtn-green, .ludoBtn-green-completed').length;
             } else {
                 var abcgf = null;
             }
