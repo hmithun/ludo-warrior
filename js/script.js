@@ -1867,11 +1867,7 @@ $(document).ready(function() {
 
 });
 
-$(window).load(function() {
-      // loader
-    $("#status").fadeOut();
-    $("#preloader").delay(100).fadeOut("slow"); 
-});
+
 
 function fullscreen() {
     if ((document.fullScreenElement && document.fullScreenElement !== null) ||
@@ -1893,3 +1889,10 @@ function fullscreen() {
         }
     }
 }
+
+$(window).load(function() {
+      // loader
+    $("#status").fadeOut();
+    $("#preloader").delay(100).fadeOut("slow"); 
+});
+
