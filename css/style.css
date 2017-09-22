@@ -338,12 +338,6 @@ body {
     display: inline-block;
     height: 110px;
     width: 110px;
-    /* border: 3px solid transparent; */
-    /* border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px; */
     font-size: 0;
     text-align: center;
     font-family: monospace;
@@ -848,12 +842,20 @@ body {
     -moz-text-shadow: 0px 0px 5px rgba(0,0,0,0.6), -5px 0px 5px rgba(0,0,0,0.6);
     -o-text-shadow: 0px 0px 5px rgba(0,0,0,0.6), -5px 0px 5px rgba(0,0,0,0.6);
     text-transform: capitalize;
-
+    transition: all ease-in-out 200ms;
+    -webkit-transition: all ease-in-out 200ms;
+    -ms-transition: all ease-in-out 200ms;
+    -moz-transition: all ease-in-out 200ms;
+    -o-transition: all ease-in-out 200ms;
 }
-/* .homeScreen h3:hover {
-    border-color: black;
-    background: rgba(255,255,255,1);
-} */
+.homeScreen h3:hover {
+    color: #000;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -webkit-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -ms-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -moz-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -o-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+}
 
 #preloader {
     background-color: #fff;
@@ -894,18 +896,18 @@ body {
 
 
 
-.modalChoosePlayer {
+.modalChoosePlayer, .modalRules {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.7);
     display: none;
 }
 
-.modalChoosePlayerInner {
+.modalChoosePlayerInner, .modalRulesInner {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -922,18 +924,25 @@ body {
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 40px 20px;
-    background: rgba(255,255,255,0.9);
+    background: url('../images/parcheesi-1152030.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    -ms-box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    -o-box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
 }
-.modalChoosePlayerInner h4 {
-    font-size: 50px;
+
+.modalChoosePlayerInner h4, .modalRulesInner h4 {
+    font-size: 40px;
     text-align: center;
-    text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6);
+    /* text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6);
     -webkit-text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6);
     -ms-text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6);
     -moz-text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6);
-    -o-text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6);
-    color: #012265;
+    -o-text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(255,255,255,0.6); */
+    color: #fff;
     line-height: 1;
     /* text-transform: uppercase; */
     font-family: fantasy;
@@ -961,12 +970,20 @@ body {
     -ms-border-radius: 50%;
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
-    border: 4px solid #012265;
+    border: 4px solid #fff;
     box-shadow: 0px 0px 20px rgba(1,34,101,0.8);
+    -webkit-box-shadow: 0px 0px 20px rgba(1,34,101,0.8);
+    -ms-box-shadow: 0px 0px 20px rgba(1,34,101,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(1,34,101,0.8);
+    -o-box-shadow: 0px 0px 20px rgba(1,34,101,0.8);
 }
 .playerChooseBox input[type="radio"]:checked + label:before {
-    background: #012265;
-    box-shadow: 0px 0px 20px rgba(1,34,101,0.8), 0px 0px 0px 5px rgba(255,255,255,1) inset;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(1,34,101,0.8), 0px 0px 0px 5px rgba(0,0,0,1) inset;
+    -webkit-box-shadow: 0px 0px 20px rgba(1,34,101,0.8), 0px 0px 0px 5px rgba(0,0,0,1) inset;
+    -ms-box-shadow: 0px 0px 20px rgba(1,34,101,0.8), 0px 0px 0px 5px rgba(0,0,0,1) inset;
+    -moz-box-shadow: 0px 0px 20px rgba(1,34,101,0.8), 0px 0px 0px 5px rgba(0,0,0,1) inset;
+    -o-box-shadow: 0px 0px 20px rgba(1,34,101,0.8), 0px 0px 0px 5px rgba(0,0,0,1) inset;
 }
 .playerChooseBox ul {
     text-align: center;
@@ -1018,10 +1035,10 @@ body {
     display: none;
 }
 .multiplayer label {
-    color: #012265;
-    font-size: 30px;
-    border: 3px solid #012265;
-    padding: 15px 10px 0px 10px;
+    color: #fff;
+    font-size: 20px;
+    border: 3px solid #fff;
+    padding: 10px 10px 0px 10px;
     margin: 0 10px;
     line-height: 1;
     display: inline-block;
@@ -1030,13 +1047,14 @@ body {
     cursor: pointer;
 }
 .multiplayer input[type="radio"]:checked + label {
-    background: #012265;
-    color: #fff;
+    background: #fff;
+    color: #012265;
     opacity: 1;
 }
 .play label {
     opacity: 1;
     margin: 20px;
+    display: inline-block;
 }
 
 /* .deactivePlayer {
@@ -1055,7 +1073,20 @@ body {
     left: 175px;
 }
 .optionBox > div > h3 {
-    margin: 10px 0;
+    margin: 15px 0;
+    transition: all ease-in-out 200ms;
+    -webkit-transition: all ease-in-out 200ms;
+    -ms-transition: all ease-in-out 200ms;
+    -moz-transition: all ease-in-out 200ms;
+    -o-transition: all ease-in-out 200ms;
+}
+.optionBox > div > h3:hover {
+    color: #000;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -webkit-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -ms-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -moz-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
+    -o-text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 5px #fff;
 }
 #imgs {
     position: absolute;
@@ -1072,13 +1103,15 @@ body {
     vertical-align: middle;
     height: 200px;
     text-align: center;
-    background: url('../images/King_Crown_and_Cape_PNG_Clipart.png');
-    background-size: 450px;
-    background-repeat: no-repeat;
-    background-position: center 250px;
+    
 }
 .win-info {
-    padding: 20px 0;
+    background: url('../images/King_Crown_and_Cape_PNG_Clipart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    padding: 350px 0 0;
 }
 .win-info h3 {
     font-size: 40px;
@@ -1090,9 +1123,6 @@ body {
     -moz-text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(0,0,0,0.6);
     -o-text-shadow: 0px 0px 5px rgba(255,255,255,0.6), -5px 0px 5px rgba(0,0,0,0.6);
 }
-.cong-msg {
-    margin-bottom: 275px;
-}
 .ludoBtn-green-completed {
     top: 0;
     right: 0;
@@ -1103,13 +1133,51 @@ body {
     right: 0;
     margin: 12px;
 }
-
-
-
-
-
-
-
+.play label {
+    opacity: 1;
+    margin: 20px;
+    padding: 8px 10px 0;
+    background: #012265;
+}
+.play label:hover {
+    background: #012265;
+    opacity: 0.6;
+}
+.play label img {
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.ruleInfo {
+    background: #fff;
+    padding: 30px;
+    height: 300px;
+    overflow: scroll;
+    font-family: fantasy;
+    margin-top: 20px;
+}
+.ruleInfo h5 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.ruleInfo h5:first-child {
+    margin-top: 0;
+}
+.ruleInfo p {
+    line-height: 28px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.ex-logo-small h2 {
+    font-size: 80px;
+}
+.ex-logo-small h2 span {
+    font-size: 14px;
+    top: 10px;
+    left: 190px;
+}
 
 
 

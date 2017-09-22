@@ -163,12 +163,12 @@ function diceAnimate() {
 // ----------------------------STAR SOUND-------------------------
 
 // function for star sound 
-function starSound() {
-    if($(".ludoBoardBox > div").parents('.ludoBoardBox').hasClass('star')){
-        $("#completed").trigger('play');
-        $("#completed").prop("currentTime", 0);
-    }  
-}
+// function starSound() {
+//     if($(".ludoBoardBox > div").parents('.ludoBoardBox').hasClass('star')){
+//         $("#completed").trigger('play');
+//         $("#completed").prop("currentTime", 0);
+//     }  
+// }
 // function for star sound end
 
 
@@ -201,16 +201,33 @@ $(document).ready(function() {
         $(".modalChoosePlayer").fadeIn(800);
     });
 
+    $(".rules").on('click',function(){
+        $(".modalRules").fadeIn(800);
+    });
+
     $(".back-mm").on('click',function(){
+
+        $("#btnsound").trigger('play');
+        $("#btnsound").prop("currentTime", 0);
+
         $(".options").fadeIn(800);
-        $(".modalChoosePlayer").hide();
+        $(".modalChoosePlayer").fadeOut(500);
+        $(".modalRules").fadeOut(500);
     });
 
     $(".playgame").on('click',function(){
+
+        $("#btnsound").trigger('play');
+        $("#btnsound").prop("currentTime", 0);
+
         $(".homeScreen").fadeOut(800);
     });
 
     $('.playerChooseBox input[type="radio"]').click(function(){
+
+        $("#btnsound").trigger('play');
+        $("#btnsound").prop("currentTime", 0);
+
         if($("#red-blue-color").is(':checked')){
             redblue = true
             yellowgreen = false,
@@ -272,6 +289,13 @@ $(document).ready(function() {
     });
 
     $('.multiplayer input[type="radio"]').click(function(){
+
+        $("#btnsound").trigger('play');
+        $("#btnsound").prop("currentTime", 0);
+
+        $("#red-blue-color").prop('checked', false);
+        $("#yellow-green-color").prop('checked', false);
+
         if ($("#2").is(':checked')){
             $(".player2").show();
             $(".player4").hide();
@@ -282,41 +306,45 @@ $(document).ready(function() {
             fourPlayer = true
         }
 
+        yellowgreen = null,
+        redblue = null
+
+        $(".yellowBox, .blueBox, .redBox, .greenBox").removeClass('deactivePlayer');
+        $(".ludoBtn").css('opacity', '1');
+        $(".diceBox").css('opacity', '1');
+
     });
 
 
+    $(".optionBox > div > h3, .homeScreen h3").hover(function(){
+        $("#btnsound").trigger('play');
+        $("#btnsound").prop("currentTime", 0);
+    });
 
-    
 
+    // Sounds
 
+    var bgSound = true
 
-
-    //window.my_mute = false;
-    // var abc = true
-
-    // $('.sound').on('click', function(){
-    //     if(abc == true) {
-    //         $('audio').each(function(){
-    //         this.pause(); // Stop playing
-    //         this.currentTime = 0; // Reset time
-
-    //     }); 
-    //     } else {
-    //        $('audio').trigger('play'); 
-    //     }
+    $('.sound').on('click', function(){
+        if(bgSound == true) {
+            $('audio').each(function(){
+                this.muted = true; // Stop playing
+            });
+            bgSound = false 
+        } 
+        else {
+            $('audio').each(function(){
+                this.muted = false 
+            });
+            bgSound = true 
+        }   
         
-    //     abc = false
-
-    // });
-
+    });
 
 
     
 
-
-
-
-    //if(fourPlayer === true){
     // -----------------------------------------------------------------------------------------
     // -----------------------------------------------------------------------------------------
     // ************************** RED START *************************************
@@ -490,6 +518,7 @@ $(document).ready(function() {
 
             // Check final step buttons
             if(btnCounter === true) {
+
             	if($(".ludoBoardBox .ludoBtn-red").length - $(".redStep .ludoBtn-red").length < 1) {
                     console.log("kmf");
             		$(".redBox .diceBox").addClass('disabled').removeClass('enable');
@@ -525,6 +554,8 @@ $(document).ready(function() {
             if (diceNumber === 1 || diceNumber === 2 || diceNumber === 3 || diceNumber === 4 || diceNumber === 5) {
                 $(".redBox .diceBox").addClass('onetimePlease');
 
+            } else {
+               $(".redBox .diceBox").addClass('onetimePlease'); 
             }
         }
         
@@ -545,7 +576,7 @@ $(document).ready(function() {
                 $("#ohho").trigger('play');
                 $("#ohho").prop("currentTime", 0);
             }
-            if($("[data-red ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-red, .ludoBtn-red-completed").length || $("[data-red ='" + ludoBtnCrntNmbr + "']").hasClass('star')){
+            if($("[data-red ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-red, .ludoBtn-red-completed").length || $("[data-red ='" + ludoBtnCrntNmbr + "']").hasClass('star') || $("[data-red ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-yellow').length > 1 || $("[data-red ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-blue').length > 1 || $("[data-red ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-green').length > 1){
 
             } else {
 
@@ -679,6 +710,8 @@ $(document).ready(function() {
 
             $("#win").trigger('play');
             $("#win").prop("currentTime", 0);
+
+            $(".win-info h3").text('Red Player Win');
 
             $(".diceBox").remove();
         }
@@ -866,9 +899,9 @@ $(document).ready(function() {
 
             // Check final step buttons
             if(btnCounter === true) {
-                if($(".ludoBoardBox .ludoBtn-blue").length - $(".yellowStep .ludoBtn-blue").length < 1) {
-                    console.log("kmf");
-                    $(".blueBox .diceBox").addClass('disabled').removeClass('enable');
+                if($(".ludoBoardBox .ludoBtn-yellow").length - $(".yellowStep .ludoBtn-yellow").length < 1) {
+                    $(".yellowBox .diceBox").addClass('disabled').removeClass('enable');
+                    
                     if(yellowgreen == true){
                         $(".greenBox .diceBox").addClass('enable').removeClass('disabled');
                         $('.greenBox .diceBox').removeClass('onetimePlease');
@@ -876,7 +909,8 @@ $(document).ready(function() {
                         $(".blueBox .diceBox").addClass('enable').removeClass('disabled');
                         $('.blueBox .diceBox').removeClass('onetimePlease');
                     }
-                    $('.blueBox .diceBox').removeClass('onetimePlease');
+                    
+                    $('.yellowBox .diceBox').removeClass('onetimePlease');
                 }
             }
 
@@ -900,7 +934,8 @@ $(document).ready(function() {
             // Conditions For Running Btns (1-5)
             if (diceNumber === 1 || diceNumber === 2 || diceNumber === 3 || diceNumber === 4 || diceNumber === 5) {
                 $(".yellowBox .diceBox").addClass('onetimePlease');
-
+            } else {
+               $(".yellowBox .diceBox").addClass('onetimePlease'); 
             }
         }
         
@@ -921,7 +956,7 @@ $(document).ready(function() {
                 $("#ohho").trigger('play');
                 $("#ohho").prop("currentTime", 0);
             }
-            if($("[data-yellow ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-yellow, .ludoBtn-yellow-completed").length || $("[data-yellow ='" + ludoBtnCrntNmbr + "']").hasClass('star')){
+            if($("[data-yellow ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-yellow, .ludoBtn-yellow-completed").length || $("[data-yellow ='" + ludoBtnCrntNmbr + "']").hasClass('star') || $("[data-yellow ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-red').length > 1 ||  $("[data-yellow ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-blue').length > 1 ||  $("[data-yellow ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-green').length > 1){
 
             } else {
 
@@ -1039,6 +1074,27 @@ $(document).ready(function() {
                 $("#completed").prop("currentTime", 0);
             }
         } 
+
+
+        if($('div.yellowStep[data-yellow="57"]').find(".ludoBtn-yellow-completed").length == 4) {
+            console.log('win');
+            $(".homeScreen").hide();
+            $(".win-message").fadeIn(200);
+
+            $("#bg").trigger('pause');
+            $("#bg").prop("currentTime", 0);
+
+            setTimeout(function() {
+                $('#imgs').fireworks();
+            });
+
+            $("#win").trigger('play');
+            $("#win").prop("currentTime", 0);
+
+            $(".win-info h3").text('Yellow Player Win');
+
+            $(".diceBox").remove();
+        }
 
         // Play Star Sound
         //starSound();
@@ -1258,7 +1314,8 @@ $(document).ready(function() {
             // Conditions For Running Btns (1-5)
             if (diceNumber === 1 || diceNumber === 2 || diceNumber === 3 || diceNumber === 4 || diceNumber === 5) {
                 $(".blueBox .diceBox").addClass('onetimePlease');
-
+            } else {
+                $(".blueBox .diceBox").addClass('onetimePlease');
             }
         }
         
@@ -1279,7 +1336,7 @@ $(document).ready(function() {
                 $("#ohho").trigger('play');
                 $("#ohho").prop("currentTime", 0);
             }
-            if($("[data-blue ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-blue, .ludoBtn-blue-completed").length || $("[data-blue ='" + ludoBtnCrntNmbr + "']").hasClass('star')){
+            if($("[data-blue ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-blue, .ludoBtn-blue-completed").length || $("[data-blue ='" + ludoBtnCrntNmbr + "']").hasClass('star') || $("[data-blue ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-yellow').length > 1 || $("[data-blue ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-green').length > 1 || $("[data-blue ='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-red').length > 1){
 
             } else {
 
@@ -1397,6 +1454,27 @@ $(document).ready(function() {
                 $("#completed").prop("currentTime", 0);
             }
         } 
+
+
+        if($('div.blueStep[data-blue="57"]').find(".ludoBtn-blue-completed").length == 4) {
+            console.log('win');
+            $(".homeScreen").hide();
+            $(".win-message").fadeIn(200);
+
+            $("#bg").trigger('pause');
+            $("#bg").prop("currentTime", 0);
+
+            setTimeout(function() {
+                $('#imgs').fireworks();
+            });
+
+            $("#win").trigger('play');
+            $("#win").prop("currentTime", 0);
+
+            $(".win-info h3").text('Blue Player Win');
+
+            $(".diceBox").remove();
+        }
 
         // Play Star Sound
         //starSound();
@@ -1615,7 +1693,8 @@ $(document).ready(function() {
             // Conditions For Running Btns (1-5)
             if (diceNumber === 1 || diceNumber === 2 || diceNumber === 3 || diceNumber === 4 || diceNumber === 5) {
                 $(".greenBox .diceBox").addClass('onetimePlease');
-
+            } else {
+                $(".greenBox .diceBox").addClass('onetimePlease');
             }
         }
         
@@ -1636,7 +1715,7 @@ $(document).ready(function() {
                 $("#ohho").trigger('play');
                 $("#ohho").prop("currentTime", 0);
             }
-            if($("[data-green ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-green, .ludoBtn-green-completed").length || $("[data-green ='" + ludoBtnCrntNmbr + "']").hasClass('star')){
+            if($("[data-green ='" + ludoBtnCrntNmbr + "']").children(".ludoBtn-green, .ludoBtn-green-completed").length || $("[data-green ='" + ludoBtnCrntNmbr + "']").hasClass('star') || $("[data-green='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-red').length > 1 || $("[data-green='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-yellow').length > 1 || $("[data-green='" + ludoBtnCrntNmbr + "']").children('.ludoBtn-blue').length > 1){
 
             } else {
 
@@ -1754,6 +1833,27 @@ $(document).ready(function() {
                 $("#completed").prop("currentTime", 0);
             }
         } 
+
+
+        if($('div.greenStep[data-green="57"]').find(".ludoBtn-green-completed").length == 4) {
+            console.log('win');
+            $(".homeScreen").hide();
+            $(".win-message").fadeIn(200);
+
+            $("#bg").trigger('pause');
+            $("#bg").prop("currentTime", 0);
+
+            setTimeout(function() {
+                $('#imgs').fireworks();
+            });
+
+            $("#win").trigger('play');
+            $("#win").prop("currentTime", 0);
+
+            $(".win-info h3").text('Green Player Win');
+
+            $(".diceBox").remove();
+        }
 
         // Play Star Sound
         //starSound();
