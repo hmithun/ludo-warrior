@@ -357,6 +357,10 @@ body {
     top: 0;
     padding: 4px 0 0 4px;
     box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -371,6 +375,10 @@ body {
     top: 0;
     padding: 8px 0 0 10px;
     box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -385,6 +393,10 @@ body {
     bottom: 0;
     padding: 10px 0 0 8px;
     box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -399,6 +411,10 @@ body {
     bottom: 0;
     padding: 10px 0 0 10px;
     box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.2) inset, 0px 0px 7px 4px rgba(0,0,0,0.5);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -407,44 +423,14 @@ body {
     border: 3px solid #fff;
     background: #FFDE17
 }
-/* .yellowBox .diceBox.disabled {
-    right: 200px;
-}
-.yellowBox .diceBox.enable {
-    right: -120px;
-}
 
-.blueBox .diceBox.disabled {
-    right: 200px;
-}
-.blueBox .diceBox.enable {
-    right: -120px;
-}
-.greenBox .diceBox.disabled {
-    left: 200px;
-}
-.greenBox .diceBox.enable {
-    left: -120px;
-} */
-
-
-
-
-
-
-
-.diceBox {
-    /* opacity: 0.6; */
-}
 .diceBox.disabled {
     pointer-events: none;
     border-color: #ccc;
 }
 .diceBox.enable {
-    pointer-events: inherit;
-    
+    pointer-events: inherit;   
     cursor: pointer;
-    /* opacity: 1; */
 }
 .diceBox.disabled .diceIcon {
     opacity: 0.2;
@@ -597,11 +583,11 @@ body {
     background: url('../images/greenarw.png') no-repeat center;
     background-size: 20px;
     background-color: white;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
 }
 .blue-arw {
     background: url('../images/bluearw.png') no-repeat center;
