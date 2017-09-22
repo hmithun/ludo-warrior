@@ -296,6 +296,13 @@ $(document).ready(function() {
         $("#red-blue-color").prop('checked', false);
         $("#yellow-green-color").prop('checked', false);
 
+        // Disable All Player First Time
+        $(".diceBox").addClass('disabled').removeClass('enable');
+
+        // Enable First Player (Red) First Time
+        $(".redBox .diceBox").addClass('enable').removeClass('disabled');
+
+        
         if ($("#2").is(':checked')){
             $(".player2").show();
             $(".player4").hide();
