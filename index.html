@@ -14,18 +14,24 @@
 	    <div id="status"></div>
 	</div>
 	<!-- loader end -->
-	<audio id="audioDiceSoundBible" src="Dice-Sound.mp3"></audio>
-	<audio id="btnsound" src="Blop-Mark_DiAngelo-79054334.mp3"></audio>
-	<audio id="punch" src="Realistic_Punch-Mark_DiAngelo-1609462330.mp3"></audio>
-	<audio id="completed" src="1_person_cheering-Jett_Rifkin-1851518140.mp3"></audio>
-	<audio id="ohho" src="oh-ohhh-31114.mp3"></audio>
-	<audio loop id="bg" src="Game-Menu_Looping.mp3"></audio>
+
+	<!-- Sounds -->
+
+	<audio id="audioDiceSoundBible" src="sound/dice-sound.mp3"></audio>
+	<audio id="btnsound" src="sound/btn-move.mp3"></audio>
+	<audio id="punch" src="sound/btn-cut.mp3"></audio>
+	<audio id="completed" src="sound/gotohome.mp3"></audio>
+	<audio id="ohho" src="sound/btn-not-cut.mp3"></audio>
+	<audio loop id="bg" src="sound/game-menu-looping.mp3"></audio>
 	
+	<!-- Sounds -->
+
+	<!-- Home Screen -->
 	<div class="homeScreen">
 		<div class="txt">
 			<div class="logo">
 				<div>
-					<img src="images/ludo.png" alt="" width="200">
+					<img src="images/ludo-logo-icon.png" alt="" width="200">
 				</div>
 				<h2><span>The Classic</span> Ludo </h2>
 			</div>
@@ -35,7 +41,7 @@
 		<div class="options">
 			<div class="logo">
 				<div>
-					<img src="images/ludo.png" alt="" width="100">
+					<img src="images/ludo-logo-icon.png" alt="" width="100">
 				</div>
 				<h2><span>The Classic</span> Ludo </h2>
 			</div>
@@ -56,7 +62,7 @@
 			<div class="modalChoosePlayerInner">
 				<div class="logo logo-small">
 					<div>
-						<img src="images/ludo.png" alt="" width="100">
+						<img src="images/ludo-logo-icon.png" alt="" width="100">
 					</div>
 					<h2><span>The Classic</span> Ludo </h2>
 				</div>
@@ -100,8 +106,8 @@
 					<input type="radio" name="player" id="4" checked="checked">
 					<label for="4">4 Player</label>
 					<div class="play">
-						<label class="back-mm"><img src="images/arrow-back-128.png" alt="">Main Menu</label>
-						<label class="playgame"><img src="images/icon-play-128.png" alt="">Play</label>
+						<label class="back-mm"><img src="images/arrow-back.png" alt="">Main Menu</label>
+						<label class="playgame"><img src="images/icon-play.png" alt="">Play</label>
 					</div>
 				</div>
 
@@ -112,7 +118,7 @@
 			<div class="modalRulesInner">
 				<div class="logo logo-small ex-logo-small">
 					<div>
-						<img src="images/ludo.png" alt="" width="80">
+						<img src="images/ludo-logo-icon.png" alt="" width="80">
 					</div>
 					<h2><span>The Classic</span> Ludo </h2>
 				</div>
@@ -144,15 +150,16 @@
 				</div>
 				<div class="multiplayer">
 					<div class="play">
-						<label class="back-mm"><img src="images/arrow-back-128.png" alt="">Main Menu</label>
-						<label class="playgame"><img src="images/icon-play-128.png" alt="">Play</label>
+						<label class="back-mm"><img src="images/arrow-back.png" alt="">Main Menu</label>
+						<label class="playgame"><img src="images/icon-play.png" alt="">Play</label>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
+	<!-- Home Screen -->
 
+	<!-- Win Message -->
 	<div class="win-message" style="display: none">
 		<audio id="win" src="Fireworks And Crowd-SoundBible.com-81665534.mp3" loop></audio>
 	    <div id="imgs">
@@ -166,11 +173,9 @@
 	    	</div>
 	    </div>
 	</div>
+	<!-- Win Message -->
 
 	<div class="ludo">
-		<!-- <div class="back-mm">
-			<img src="images/reply_all_arrow_filled1600.png" alt="">
-		</div> -->
 		<div class="board">
 			<div class="boardSection1">
 				<div class="boardSection1 sec-1 greenBox" style="background: #019C48">
