@@ -1142,7 +1142,7 @@ body {
     background: #fff;
     padding: 30px;
     height: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
     font-family: fantasy;
     margin-top: 20px;
 }
