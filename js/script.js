@@ -1,14 +1,14 @@
-var ludoBtnCrntNmbr
-var diceNumber
+var ludoBtnCrntNmbr;
+var diceNumber;
 var cheatDice = null;
-var btnDataNumber
-var dice
+var btnDataNumber;
+var dice;
 var cutBtn = false;
-var btnCounter
-var diceNumberEach
-var fourPlayer = false
-var redblue
-var yellowgreen
+var btnCounter;
+var diceNumberEach;
+var fourPlayer = false;
+var redblue;
+var yellowgreen;
 
 // --------------------------------RED---------------------
 
@@ -136,20 +136,20 @@ function diceAnimate() {
     // Dice Animation
     dice.animate({
         left: '+2px'
-    }, 100, function() {
+    }, 50, function() {
         dice.addClass("dice_t");
-    }).delay(200).animate({
-        top: '-2px'
-    }, 100, function() {
-        dice.removeClass("dice_t").addClass("dice_s");
-    }).delay(200).animate({
-        opacity: 'show'
-    }, 600, function() {
-        dice.removeClass("dice_s").addClass("dice_e");
     }).delay(100).animate({
+        top: '-2px'
+    }, 50, function() {
+        dice.removeClass("dice_t").addClass("dice_s");
+    }).delay(100).animate({
+        opacity: 'show'
+    }, 300, function() {
+        dice.removeClass("dice_s").addClass("dice_e");
+    }).delay(50).animate({
         left: '-2px',
         top: '2px'
-    }, 100, function() {
+    }, 50, function() {
         dice.removeClass("dice_e").addClass("dice_" + diceNumber);
         $(this).parents('.boardSection1').find('.diceNumber').html(diceNumber);
         dice.css('cursor', 'pointer');
@@ -182,10 +182,11 @@ $(document).ready(function() {
     // Enable First Player (Red) First Time
     $(".redBox .diceBox").addClass('enable').removeClass('disabled');
 
-    
+    $(".sound-off").css('display','none');
 
     $("#bg").trigger('play');
     $("#bg").prop("currentTime", 0);
+    
 
     $(".options").hide();
 
@@ -203,6 +204,7 @@ $(document).ready(function() {
 
     $(".rules").on('click',function(){
         $(".modalRules").fadeIn(800);
+        $(".homeScreen").fadeIn(500);
     });
 
     $(".back-mm").on('click',function(){
@@ -220,7 +222,11 @@ $(document).ready(function() {
         $("#btnsound").trigger('play');
         $("#btnsound").prop("currentTime", 0);
 
+        //$("#bg").prop("currentTime", 0);
+        $("#bg").prop('volume', 0.20);
+
         $(".homeScreen").fadeOut(800);
+        $(".modalRules").fadeOut(800);
     });
 
     $('.playerChooseBox input[type="radio"]').click(function(){
@@ -323,7 +329,7 @@ $(document).ready(function() {
     });
 
 
-    $(".optionBox > div > h3, .homeScreen h3").hover(function(){
+    $(".optionBox > div > h3, .homeScreen h3, .game-options a").hover(function(){
         $("#btnsound").trigger('play');
         $("#btnsound").prop("currentTime", 0);
     });
@@ -337,12 +343,16 @@ $(document).ready(function() {
         if(bgSound == true) {
             $('audio').each(function(){
                 this.muted = true; // Stop playing
+                $(".sound-off").css('display','block');
+                $(".sound-on").css('display','none');
             });
             bgSound = false 
         } 
         else {
             $('audio').each(function(){
                 this.muted = false 
+                $(".sound-on").css('display','block');
+                $(".sound-off").css('display','none');
             });
             bgSound = true 
         }   
@@ -350,7 +360,17 @@ $(document).ready(function() {
     });
 
 
-    
+    $(".game-options .rules").on('click',function(){
+        $(".back-mm").css('display','none');
+    });
+
+
+    $(".playagain, .power-off a").on('click',function(){
+        location.reload();
+    });
+
+    $('.multiplayer #2').prop('checked', false);
+    $('.multiplayer #4').prop('checked', true);
 
     // -----------------------------------------------------------------------------------------
     // -----------------------------------------------------------------------------------------
